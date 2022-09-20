@@ -8,14 +8,16 @@ export const nameAndEmailValidator = (target, targetValue, inputStates, setInput
             ...inputStates,
             value: targetValue,
             error: true,
-            isValid: false
+            isValid: false,
+            errorMessage: ""
         })
     }else{
         setInputStates({
             ...inputStates,
             value: targetValue,
             error: false,
-            isValid: true
+            isValid: true,
+            errorMessage: ""
         })
     }
 }

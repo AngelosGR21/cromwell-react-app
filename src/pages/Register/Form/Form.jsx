@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 import NameField from "./NameField";
@@ -7,14 +7,19 @@ import EmailField from "./EmailField";
 import PasswordField from "./PasswordField";
 import ConfirmPasswordField from "./ConfirmPasswordField";
 
-import { registerUser } from "../../../utils/apiRequests";
+import { registerUser } from "../../../features/auth/authSlice";
+import { useDispatch } from "react-redux";
+
+const stateTemplate = {
+    value: "",
+    error: false,
+    isValid: false
+}
 
 const Form = () => {
-    const stateTemplate = {
-        value: "",
-        error: false,
-        isValid: false
-    }
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const [firstNameStates, setFirstNameStates] = useState({ ...stateTemplate })
     const [lastNameStates, setLastNameStates] = useState({ ...stateTemplate })
     const [emailStates, setEmailStates] = useState({ ...stateTemplate })
@@ -28,7 +33,27 @@ const Form = () => {
         const valuesValid = values.every((state) => state.isValid);
 
         if (valuesValid) {
-            registerUser(firstNameStates.value, lastNameStates.value, emailStates.value, passwordStates.value)
+            const data = {
+                firstName: firstNameStates.value,
+                lastName: lastNameStates.value,
+                email: emailStates.value,
+                password: passwordStates.value
+            }
+            dispatch(registerUser(data))
+                .unwrap()
+                .then(() => {
+                    return navigate("/");
+                })
+                .catch((e) => {
+                    if (e.message.includes("409")) {
+                        setEmailStates({
+                            ...emailStates,
+                            error: true,
+                            isValid: false,
+                            errorMessage: "Email is already in use"
+                        })
+                    }
+                })
 
         }
 

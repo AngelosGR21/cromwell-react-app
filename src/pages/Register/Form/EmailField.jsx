@@ -11,10 +11,9 @@ const EmailField = ({ emailStates, setEmailStates }) => {
             label="Email"
             name="email"
             error={emailStates.error}
-            helperText={emailStates.error && "Invalid email"}
+            helperText={emailStates.error && (emailStates.errorMessage ? emailStates.errorMessage : "Invalid email")}
             onChange={(e) => nameAndEmailValidator("email", e.target.value, emailStates, setEmailStates)}
             value={emailStates.value} />
     )
 }
-
 export default EmailField
