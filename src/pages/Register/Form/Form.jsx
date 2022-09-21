@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
 import NameField from "./NameField";
@@ -92,6 +92,14 @@ const Form = () => {
                     setConfirmPasswordStates={setConfirmPasswordStates}
                     password={passwordStates.value}
                 />
+                <p className="login-form-paragraph">
+                    Already have an account?
+                    <Link
+                        to="/login"
+                        className="login-register-link">
+                        Log in here
+                    </Link>
+                </p>
                 <Button className="register-submit-button" type="submit" variant="contained" size="large">Register</Button>
             </form>
         </section>

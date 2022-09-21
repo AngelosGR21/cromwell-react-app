@@ -4,7 +4,6 @@ body {
 
 .register-image-container {
     display: none;
-    justify-content: center;
     width: 50vw;
     height: 100vh;
 }
