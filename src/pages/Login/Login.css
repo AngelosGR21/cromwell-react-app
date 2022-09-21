@@ -1,33 +1,21 @@
-.login-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+.login-image-container {
+    display: none;
+    width: 60vw;
+    height: 100vh;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-}
+@media screen and (min-width: 900px) {
+    .login-container {
+        display: flex;
+        overflow: hidden;
+    }
 
-.login-input-field,
-.login-invalid-field {
-    margin-bottom: 15px !important;
-}
+    .login-image-container {
+        display: block;
+    }
 
-
-.login-input-field fieldset {
-    border-color: var(--primary) !important;
-}
-
-.login-invalid-field fieldset {
-    border-color: red !important;
-}
-
-
-.login-submit-button {
-    background-color: var(--primary) !important;
+    .login-image {
+        height: 100%;
+        object-fit: contain;
+    }
 }

@@ -1,0 +1,68 @@
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.login-header {
+    font-size: 32px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.login-input-field,
+.login-invalid-field {
+    margin-bottom: 15px !important;
+}
+
+
+.login-input-field fieldset {
+    border-color: var(--primary) !important;
+}
+
+.login-invalid-field fieldset {
+    border-color: red !important;
+}
+
+.login-form-paragraph {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.login-register-link {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.login-submit-button {
+    background-color: var(--primary) !important;
+}
+
+.login-register-link {
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 900px) {
+
+    .login-header {
+        font-size: 40px;
+    }
+
+    .login-form-container {
+        width: 40vw;
+        margin-top: 0;
+    }
+
+    .login-form {
+        margin-top: -110px;
+    }
+}
