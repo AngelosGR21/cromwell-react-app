@@ -4,61 +4,29 @@ body {
 
 .register-image-container {
     display: none;
-}
-
-.register-form-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    width: 50vw;
+    height: 100vh;
 }
 
-.register-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    padding: 15px 0;
-    text-align: center;
-    border-radius: 10px;
+@media screen and (min-width: 900px) {
+    .register-container {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .register-image-container {
+        display: block;
+    }
+
+    .register-image {
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
-.register-input-field,
-.input-valid,
-.input-invalid {
-    margin-bottom: 15px !important;
-}
-
-.register-input-field fieldset {
-    border-color: var(--primary) !important;
-}
-
-.input-valid fieldset {
-    border-color: rgb(15, 155, 15) !important;
-}
-
-.input-invalid fieldset {
-    border-color: red !important;
-}
-
-
-
-.register-condition-icon,
-.register-condition-icon-passed {
-    min-width: 20px !important;
-}
-
-.register-condition-icon,
-.register-condition-text {
-    color: red !important;
-}
-
-.register-condition-text-passed,
-.register-condition-icon-passed {
-    color: green !important;
-}
-
-.register-submit-button {
-    background-color: var(--primary) !important;
+@media screen and (min-width: 1260px) {
+    .register-image-container {
+        width: 60vw;
+    }
 }

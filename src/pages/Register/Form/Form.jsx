@@ -9,7 +9,9 @@ import ConfirmPasswordField from "./ConfirmPasswordField";
 
 import { openSnack } from "../../../features/snackbar/snackbarSlice";
 import { registerUser } from "../../../features/auth/authSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import "./Form.css"
 
 const stateTemplate = {
     value: "",
@@ -20,7 +22,6 @@ const stateTemplate = {
 const Form = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { open } = useSelector((store) => store.snackbar);
 
     const [firstNameStates, setFirstNameStates] = useState({ ...stateTemplate })
     const [lastNameStates, setLastNameStates] = useState({ ...stateTemplate })
@@ -65,7 +66,7 @@ const Form = () => {
     return (
         <section className="register-form-container">
             <form className="register-form" autoComplete="off" onSubmit={handleSubmit}>
-                <h2>Register Account</h2>
+                <h2 className="register-form-header">Register Account</h2>
                 <NameField
                     label="First Name"
                     inputStates={firstNameStates}

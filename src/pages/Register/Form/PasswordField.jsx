@@ -5,7 +5,6 @@ import { TextField } from "@mui/material"
 import { passwordValidator } from "./validators"
 
 const PasswordField = ({ passwordStates, setPasswordStates, confirmPasswordValue, setConfirmPasswordStates }) => {
-    const [showConditions, setShowConditions] = useState(false);
     const [passwordConditions, setPasswordConditions] = useState({
         tenCharacters: false,
         oneUpperCase: false,
@@ -23,14 +22,13 @@ const PasswordField = ({ passwordStates, setPasswordStates, confirmPasswordValue
                 className={className}
                 label="Password"
                 type="password"
-                onFocus={() => setShowConditions(true)}
                 onChange={(e) => {
                     setPasswordStates({ ...passwordStates, value: e.target.value })
                     passwordValidator(e.target.value, setPasswordConditions, setPasswordStates, confirmPasswordValue, setConfirmPasswordStates)
                 }}
                 value={passwordStates.password}
             />
-            {showConditions ? <PasswordConditions passwordConditions={passwordConditions} /> : ""}
+            <PasswordConditions passwordConditions={passwordConditions} />
         </>
 
     )
