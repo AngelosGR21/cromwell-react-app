@@ -1,3 +1,12 @@
+:root {
+    --primary: #5b3f36;
+    --primary-light: #896a60;
+    --primary-dark: #301810;
+    --bg-white: #f5f5f6;
+    --bg-d-white: #e1e2e1;
+}
+
+
 body {
     margin: 0;
     padding: 0;
