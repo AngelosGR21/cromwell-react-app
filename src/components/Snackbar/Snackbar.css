@@ -1,0 +1,4 @@
+.snackbar-alert {
+    background-color: var(--primary-dark);
+    color: var(--bg-d-white);
+}
