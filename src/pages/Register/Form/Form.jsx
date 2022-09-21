@@ -7,8 +7,9 @@ import EmailField from "./EmailField";
 import PasswordField from "./PasswordField";
 import ConfirmPasswordField from "./ConfirmPasswordField";
 
+import { openSnack } from "../../../features/snackbar/snackbarSlice";
 import { registerUser } from "../../../features/auth/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const stateTemplate = {
     value: "",
@@ -19,6 +20,7 @@ const stateTemplate = {
 const Form = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const { open } = useSelector((store) => store.snackbar);
 
     const [firstNameStates, setFirstNameStates] = useState({ ...stateTemplate })
     const [lastNameStates, setLastNameStates] = useState({ ...stateTemplate })
@@ -42,6 +44,7 @@ const Form = () => {
             dispatch(registerUser(data))
                 .unwrap()
                 .then(() => {
+                    dispatch(openSnack("Registration successfull!"))
                     return navigate("/");
                 })
                 .catch((e) => {
