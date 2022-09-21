@@ -8,6 +8,8 @@ import Register from './pages/Register/Register';
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 
+import SnackbarLayout from './SnackbarLayout';
+
 import "./index.css"
 
 const container = document.getElementById('root');
@@ -18,9 +20,11 @@ root.render(
     <BrowserRouter>
     <Provider store={store}>
       <Routes>
+        <Route element={<SnackbarLayout/>}>
         <Route path="/" element={<Home/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login />}/>
+        </Route>
       </Routes>
     </Provider>
     </BrowserRouter>
