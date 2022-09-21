@@ -1,0 +1,33 @@
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.login-input-field,
+.login-invalid-field {
+    margin-bottom: 15px !important;
+}
+
+
+.login-input-field fieldset {
+    border-color: var(--primary) !important;
+}
+
+.login-invalid-field fieldset {
+    border-color: red !important;
+}
+
+
+.login-submit-button {
+    background-color: var(--primary) !important;
+}
