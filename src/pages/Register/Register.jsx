@@ -13,7 +13,7 @@ const Register = () => {
 
     useEffect(() => {
         if (token) navigate("/");
-    }, [])
+    })
 
     return (
         <main>
