@@ -46,7 +46,7 @@ const Form = () => {
                 .unwrap()
                 .then(() => {
                     dispatch(openSnack("Registration successfull!"))
-                    return navigate("/");
+                    return navigate("/landing");
                 })
                 .catch((e) => {
                     if (e.message.includes("409")) {

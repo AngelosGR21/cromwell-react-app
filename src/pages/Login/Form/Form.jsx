@@ -23,7 +23,7 @@ const Form = () => {
             .unwrap()
             .then(() => {
                 dispatch(openSnack("Logged in!"));
-                return navigate("/");
+                return navigate("/landing");
             })
             .catch((e) => {
                 if (e.message.includes("401")) setError(true);

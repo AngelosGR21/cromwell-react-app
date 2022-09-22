@@ -17,7 +17,7 @@ const Login = () => {
     const { token } = useSelector((store) => store.auth);
 
     useEffect(() => {
-        if (token) navigate("/landing");
+        if (token) navigate("/");
     })
 
     return (

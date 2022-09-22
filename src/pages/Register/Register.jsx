@@ -17,7 +17,7 @@ const Register = () => {
     const width = useScreenSize();
 
     useEffect(() => {
-        if (token) navigate("/landing");
+        if (token) navigate("/");
     })
 
     return (
