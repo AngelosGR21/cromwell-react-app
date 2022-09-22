@@ -6,6 +6,7 @@ import HouseIcon from '@mui/icons-material/House';
 import LoginIcon from '@mui/icons-material/Login';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 import DrawerItem from "./DrawerItem";
 
@@ -35,7 +36,8 @@ const MobileDrawer = ({ open, setOpen }) => {
                 <DrawerItem location="/landing#about" ItemIcon={InfoIcon} itemText="About Us" setOpen={setOpen} />
                 <DrawerItem location="#" ItemIcon={SupportAgentIcon} itemText="Contact Support" setOpen={setOpen} />
                 {!token && <DrawerItem location="/login" ItemIcon={LoginIcon} itemText="Login" setOpen={setOpen} />}
-                {token && <DrawerItem ItemIcon={AccountCircleIcon} itemText="Profile" setOpen={setOpen} />}
+                {!token && <DrawerItem location="/register" ItemIcon={PersonAddIcon} itemText="Register" setOpen={setOpen} />}
+                {token && <DrawerItem location="/landing#profile" ItemIcon={AccountCircleIcon} itemText="Profile" setOpen={setOpen} />}
             </List>
         </Drawer>
     )

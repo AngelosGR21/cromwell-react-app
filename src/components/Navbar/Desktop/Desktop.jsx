@@ -11,7 +11,7 @@ const Desktop = () => {
     const { token } = useSelector((store) => store.auth)
 
     const link = token ?
-        <DesktopLink location="#" text="Profile" />
+        <DesktopLink location="/landing#profile" text="Profile" />
         :
         <DesktopLink location="/login" text="Login" />
 
@@ -20,7 +20,7 @@ const Desktop = () => {
             <HideOnScroll>
                 <AppBar className="desktop-navbar" component="nav">
                     <Toolbar>
-                        <Link className="desktop-logo">
+                        <Link to="/" className="desktop-logo">
                             <Typography className="desktop-logo-text" variant='h5' mr="auto">
                                 LOGO
                             </Typography>
