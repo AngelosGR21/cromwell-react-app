@@ -19,6 +19,20 @@ export const loginUser = createAsyncThunk(
     }
 )
 
+export const fetchDetails = createAsyncThunk(
+    "authentication/getUserDetails",
+    async (payload, {getState}) => {
+        const {token} = getState().auth;
+        const request = await axios.get(`${url}/user`, {
+            headers: {
+                "Authorization": token
+            }
+        })
+
+        return request.data.data;
+    }
+)
+
 const initialState = {
     token: localStorage.getItem("auth"),
     errCode: null,
@@ -49,6 +63,13 @@ const authSlice = createSlice({
         },
         [loginUser.rejected] : (state, action) => {
             if(action.error.message.includes("401")) state.errCode = 401; 
+        },
+        [fetchDetails.fulfilled]: (state, action) => {
+            state.userData = action.payload
+            state.errCode = null
+        },
+        [fetchDetails.rejected]: (state, action) => {
+            if(action.error.message.includes("401")) state.errCode = 401;
         }
     }
 })
