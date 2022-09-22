@@ -20,8 +20,8 @@ const Mobile = () => {
                 >
                     <MenuIcon />
                 </IconButton>
-                <Typography variant='h5' ml="auto">
-                    LoGo
+                <Typography className='mobile-logo' variant='h5' ml="auto">
+                    LOGO
                 </Typography>
             </Toolbar>
 

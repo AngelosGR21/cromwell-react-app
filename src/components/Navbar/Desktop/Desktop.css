@@ -8,6 +8,11 @@
     color: var(--white);
 }
 
+.desktop-logo-text {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 40px !important;
+}
+
 .desktop-link {
     margin: 0 20px 0 0;
     color: var(--white);

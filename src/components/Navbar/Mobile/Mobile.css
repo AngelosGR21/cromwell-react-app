@@ -7,6 +7,11 @@
     height: 100vh;
 }
 
+.mobile-logo {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 40px !important;
+}
+
 .mobile-drawer-link {
     width: 100% !important;
     text-decoration: none;

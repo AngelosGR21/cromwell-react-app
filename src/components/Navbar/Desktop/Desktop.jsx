@@ -17,8 +17,8 @@ const Desktop = () => {
         <AppBar className="desktop-navbar" component="nav">
             <Toolbar>
                 <Link className="desktop-logo">
-                    <Typography variant='h5' mr="auto">
-                        LoGo
+                    <Typography className="desktop-logo-text" variant='h5' mr="auto">
+                        LOGO
                     </Typography>
                 </Link>
                 <div>
