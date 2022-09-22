@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom"
-
+import { HashLink } from "react-router-hash-link";
 
 const DesktopLink = ({ location, text }) => {
     return (
-        <Link className="desktop-link" to={location}>
+        <HashLink className="desktop-link" to={location}>
             {text}
-        </Link>
+        </HashLink>
     )
 }
 

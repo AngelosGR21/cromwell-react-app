@@ -29,13 +29,13 @@ const MobileDrawer = ({ open, setOpen }) => {
             onClose={toggleDrawer(false)}
         >
             <List className="mobile-drawer">
-                <DrawerItem location="/#sale" ItemIcon={SellIcon} itemText="For Sale" />
-                <DrawerItem location="/#rent" ItemIcon={HouseIcon} itemText="For Rent" />
+                <DrawerItem location="/#sale" ItemIcon={SellIcon} itemText="For Sale" setOpen={setOpen} />
+                <DrawerItem location="/#rent" ItemIcon={HouseIcon} itemText="For Rent" setOpen={setOpen} />
                 <Divider />
-                <DrawerItem location="/landing#about" ItemIcon={InfoIcon} itemText="About Us" />
-                <DrawerItem location="#" ItemIcon={SupportAgentIcon} itemText="Contact Support" />
-                {!token && <DrawerItem location="/login" ItemIcon={LoginIcon} itemText="Login" />}
-                {token && <DrawerItem ItemIcon={AccountCircleIcon} itemText="Profile" />}
+                <DrawerItem location="/landing#about" ItemIcon={InfoIcon} itemText="About Us" setOpen={setOpen} />
+                <DrawerItem location="#" ItemIcon={SupportAgentIcon} itemText="Contact Support" setOpen={setOpen} />
+                {!token && <DrawerItem location="/login" ItemIcon={LoginIcon} itemText="Login" setOpen={setOpen} />}
+                {token && <DrawerItem ItemIcon={AccountCircleIcon} itemText="Profile" setOpen={setOpen} />}
             </List>
         </Drawer>
     )

@@ -1,10 +1,11 @@
 import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
-import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 
-const DrawerItem = ({ location, ItemIcon, itemText }) => {
+const DrawerItem = ({ location, ItemIcon, itemText, setOpen }) => {
+
     return (
         <ListItem >
-            <Link to={location} className="mobile-drawer-link">
+            <HashLink to={location} className="mobile-drawer-link" onClick={() => setOpen(false)}>
                 <ListItemButton>
                     <ListItemIcon className="mobile-drawer-icon">
                         <ItemIcon />
@@ -13,7 +14,7 @@ const DrawerItem = ({ location, ItemIcon, itemText }) => {
                         {itemText}
                     </ListItemText>
                 </ListItemButton>
-            </Link>
+            </HashLink>
         </ListItem>
     )
 }
