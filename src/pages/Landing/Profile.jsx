@@ -1,7 +1,9 @@
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchDetails } from "../../features/auth/authSlice";
+import { openSnack } from "../../features/snackbar/snackbarSlice";
 import "./Profile.css"
 
 
@@ -15,18 +17,34 @@ const Profile = () => {
         dispatch(fetchDetails())
             .unwrap()
             .then((res) => {
-                console.log(res);
                 setUserData(res);
                 setDisplayData(true);
             }).catch((e) => {
-                console.log(e);
+                if (e.message.includes("401")) {
+                    dispatch(openSnack({ message: "Unauthorized request", severity: "error" }));
+                }
             });
     }
 
+    // if user is not logged in
+    if (!token) {
+        return (
+            <section id="profile" className="landing-profile-container">
+                <div className="landing-profile-unknown">
+                    <h3 className="landing-profile-header">Not registered yet?</h3>
+                    <Link to="/register" className="landing-profile-register-link">
+                        <Button className="landing-profile-register-button" variant="contained">Register</Button>
+                    </Link>
+                </div>
+            </section>
+        )
+    }
+
+    // after details have been fetched
     if (displayData) {
         const { email, firstName, lastName } = userData;
         return (
-            <section className="landing-profile-container show-details">
+            <section id="profile" className="landing-profile-container show-details">
                 <div className="landing-profile-details-container">
                     <h3 className="landing-profile-details">First Name : {firstName}</h3>
                     <h3 className="landing-profile-details">Last Name : {lastName}</h3>
@@ -43,8 +61,9 @@ const Profile = () => {
         )
     }
 
+    //if user is logged in
     return (
-        <section className="landing-profile-container">
+        <section id="profile" className="landing-profile-container">
             <h4 className="landing-profile-header">Want to view your account details?</h4>
             <h4 className="landing-profile-header">Click the button below</h4>
             <Button
