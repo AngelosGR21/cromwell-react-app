@@ -1,0 +1,22 @@
+.mobile-navbar {
+    background-color: var(--primary-dark) !important;
+}
+
+.mobile-drawer {
+    background-color: var(--primary-light);
+    height: 100vh;
+}
+
+.mobile-drawer-link {
+    width: 100% !important;
+    text-decoration: none;
+    color: var(--text-p-dark);
+}
+
+.mobile-drawer-icon {
+    color: var(--primary-dark) !important;
+}
+
+.mobile-drawer-icon svg {
+    font-size: 28px;
+}

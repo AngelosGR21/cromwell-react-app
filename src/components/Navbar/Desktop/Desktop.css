@@ -1,0 +1,20 @@
+.desktop-navbar {
+    background-color: var(--primary-dark) !important;
+}
+
+.desktop-logo {
+    margin-right: auto;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.desktop-link {
+    margin: 0 20px 0 0;
+    color: var(--white);
+    font-size: 17px;
+}
+
+.desktop-icon {
+    margin: 10px 5px 0 0 !important;
+    font-size: 30px !important;
+}
