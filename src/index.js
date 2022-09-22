@@ -7,8 +7,10 @@ import { store } from './app/store';
 import Register from './pages/Register/Register';
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Landing from './pages/Landing/Landing';
 
-import SnackbarLayout from './SnackbarLayout';
+import SnackbarLayout from './layouts/SnackbarLayout';
+import NavbarLayout from './layouts/NavbarLayout';
 
 import "./index.css"
 
@@ -21,9 +23,12 @@ root.render(
     <Provider store={store}>
       <Routes>
         <Route element={<SnackbarLayout/>}>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login />}/>
+            <Route element={<NavbarLayout/>}>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/landing" element={<Landing/>}/>
+            </Route>
+              <Route path="/register" element={<Register/>}/>
+              <Route path="/login" element={<Login />}/>
         </Route>
       </Routes>
     </Provider>
