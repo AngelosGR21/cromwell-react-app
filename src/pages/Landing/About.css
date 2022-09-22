@@ -1,0 +1,60 @@
+.landing-about-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.landing-about-main-header {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.15rem;
+}
+
+.landing-about-info-container {
+    margin-bottom: 50px;
+}
+
+.landing-about-icon {
+    color: var(--primary-light);
+    font-size: 70px !important;
+}
+
+.landing-about-header {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin: 0 0 15px 0;
+}
+
+.landing-about-p {
+    font-family: 'Cormorant Garamond', serif;
+    color: gray;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 1000px) {
+    .landing-about-options-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .landing-about-info-container {
+        margin: 3rem 0;
+        justify-self: end;
+    }
+
+    .landing-about-info-container:nth-of-type(2),
+    .landing-about-info-container:nth-of-type(4) {
+        justify-self: start;
+    }
+
+    .landing-about-main-header {
+        font-size: 2.7rem;
+    }
+
+    .landing-about-header {
+        font-size: 1.6rem;
+    }
+
+}
