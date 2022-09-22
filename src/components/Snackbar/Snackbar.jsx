@@ -6,7 +6,7 @@ import "./Snackbar.css"
 
 const CustomSnackbar = () => {
     const dispatch = useDispatch();
-    const { vertical, horizontal, open, message } = useSelector((store) => store.snackbar);
+    const { vertical, horizontal, open, message, severity } = useSelector((store) => store.snackbar);
 
     const handleClose = (event, reason) => {
         if (reason === "clickaway") {
@@ -22,7 +22,7 @@ const CustomSnackbar = () => {
             onClose={handleClose}
             anchorOrigin={{ vertical, horizontal }}
         >
-            <Alert severity='success' onClose={handleClose} className="snackbar-alert">
+            <Alert variant="filled" severity={severity} onClose={handleClose} className="snackbar-alert">
                 {message}
             </Alert>
         </Snackbar >

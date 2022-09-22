@@ -22,7 +22,7 @@ const Form = () => {
         dispatch(loginUser({ email, password }))
             .unwrap()
             .then(() => {
-                dispatch(openSnack("Logged in!"));
+                dispatch(openSnack({ message: "Logged in!", severity: "success" }));
                 return navigate("/landing");
             })
             .catch((e) => {

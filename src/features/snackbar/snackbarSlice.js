@@ -5,7 +5,8 @@ const initialState ={
     open: false,
     message: "",
     vertical: "top",
-    horizontal: "right"
+    horizontal: "right",
+    severity: "success"
 }
 
 const snackbarSlice = createSlice({
@@ -13,7 +14,8 @@ const snackbarSlice = createSlice({
     initialState,
     reducers:{
         openSnack(state, action){
-            state.message = action.payload;
+            state.message = action.payload.message;
+            state.severity = action.payload.severity;
             state.open = true;
         },
         closeSnack(state){

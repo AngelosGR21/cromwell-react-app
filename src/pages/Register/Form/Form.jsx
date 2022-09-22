@@ -45,7 +45,7 @@ const Form = () => {
             dispatch(registerUser(data))
                 .unwrap()
                 .then(() => {
-                    dispatch(openSnack("Registration successfull!"))
+                    dispatch(openSnack({ message: "Registration successful!", severity: "success" }))
                     return navigate("/landing");
                 })
                 .catch((e) => {
