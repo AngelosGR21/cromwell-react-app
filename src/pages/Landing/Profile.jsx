@@ -1,13 +1,14 @@
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { Button } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchDetails } from "../../features/auth/authSlice";
+import { fetchDetails, authLogout } from "../../features/auth/authSlice";
 import { openSnack } from "../../features/snackbar/snackbarSlice";
 import "./Profile.css"
 
 
 const Profile = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userData, setUserData] = useState({});
     const [displayData, setDisplayData] = useState(false);
@@ -24,6 +25,12 @@ const Profile = () => {
                     dispatch(openSnack({ message: "Unauthorized request", severity: "error" }));
                 }
             });
+    }
+
+    const handleLogout = () => {
+        dispatch(authLogout())
+        dispatch(openSnack({ message: "Logged out", severity: "info" }))
+        navigate("/")
     }
 
     // if user is not logged in
@@ -50,11 +57,18 @@ const Profile = () => {
                     <h3 className="landing-profile-details">Last Name : {lastName}</h3>
                     <h3 className="landing-profile-details">Email : {email}</h3>
                     <Button
-                        className="landing-hide-details-button"
+                        className="landing-details-button"
                         variant="contained"
                         onClick={() => setDisplayData(false)}
                     >
                         Hide details
+                    </Button>
+                    <Button
+                        className="landing-logout-button landing-details-button"
+                        variant="contained"
+                        onClick={handleLogout}
+                    >
+                        Logout
                     </Button>
                 </div>
             </section>
