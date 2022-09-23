@@ -1,49 +1,51 @@
-import houseImg from "./house.jpg";
-import houseImg1 from "./house1.jpg";
-import houseImg2 from "./house2.jpg";
-import houseImg3 from "./house3.jpg";
-import houseImg4 from "./house4.jpg";
-import houseImg5 from "./house5.jpg";
+import image from "./dataImages/mHouse.webp";
+import image1 from "./dataImages/mHouse1.webp";
+import image2 from "./dataImages/mHouse2.webp";
+import image3 from "./dataImages/mHouse3.webp";
+import image4 from "./dataImages/mHouse4.webp";
+import image5 from "./dataImages/mHouse5.webp";
 
 
 
-const data = [
+export const sale = [
     {
         id: 0,
-        img: houseImg,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        img: image,
+        title: "Carnforth",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
     },
     {
         id: 1,
-        img: houseImg1,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        img: image1,
+        title: "Cirencester",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
     },
     {
         id: 2,
-        img: houseImg2,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
-    },
-    {
-        id: 3,
-        img: houseImg3,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
-    },
-    {
-        id: 4,
-        img: houseImg4,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
-    },
-    {
-        id: 5,
-        img: houseImg5,
-        title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        img: image2,
+
+        title: "Carnforth",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
     }
 ]
 
-export default data;
+export const rent = [
+    {
+    id: 3,
+    img: image3,
+    title: "Ridgewood",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
+    },
+    {
+    id: 4,
+    img: image4,
+    title: "Saint Albert",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
+    },
+    {
+    id: 5,
+    img: image5,
+    title: "Herrin",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue enim eget massa maximus, nec auctor neque tincidunt. Donec finibus sem ac arcu molestie, at interdum tortor pretium. Aliquam erat volutpat. Integer id convallis turpis. Phasellus hendrerit sem quis diam vehicula, vitae pulvinar odio blandit. Nulla suscipit lectus porta semper dictum."
+    }
+]
