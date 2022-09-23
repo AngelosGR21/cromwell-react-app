@@ -22,7 +22,7 @@ const Desktop = () => {
                     <Toolbar>
                         <Link to="/" className="desktop-logo">
                             <Typography className="desktop-logo-text" variant='h5' mr="auto">
-                                LOGO
+                                BHOUSE
                             </Typography>
                         </Link>
                         <div>
