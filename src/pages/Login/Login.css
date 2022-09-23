@@ -11,11 +11,20 @@
     }
 
     .login-image-container {
+        background-image: url("../../assets/pagesImages/house3.webp");
+        background-size: cover;
+        background-position: center;
         display: block;
     }
 
     .login-image {
         height: 100%;
         object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .login-image-container {
+        background-image: url("../../assets/pagesImages/house4.webp");
     }
 }

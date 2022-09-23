@@ -16,6 +16,9 @@ body {
 
     .register-image-container {
         display: block;
+        background-image: url("../../assets/pagesImages/house5.webp");
+        background-size: cover;
+        background-position: center;
     }
 
     .register-image {
@@ -24,8 +27,9 @@ body {
     }
 }
 
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 1250px) {
     .register-image-container {
+        background-image: url("../../assets/pagesImages/house.webp");
         width: 60vw;
     }
 }
