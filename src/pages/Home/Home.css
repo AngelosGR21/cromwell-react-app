@@ -1,0 +1,142 @@
+.home-search-container {
+    background-image: url("../../assets/pagesImages/house6.webp");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.home-searchbar-container {
+    width: 90%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.home-searchbar {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--bg-white);
+    margin-right: 5px !important;
+    border-radius: 5px;
+}
+
+.home-search-icon {
+    font-size: 20px !important;
+}
+
+.home-search-button {
+    background-color: var(--primary-dark) !important;
+    border-radius: 5px;
+}
+
+.home-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.home-card-header {
+    margin: 100px 0;
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+}
+
+.home-card {
+    width: 95%;
+    max-width: 400px;
+    background-color: var(--bg-white);
+    margin-bottom: 30px;
+}
+
+.home-card-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.home-card-title {
+    margin-left: 20px;
+    font-size: 1.7rem;
+    color: var(--primary-dark);
+}
+
+.home-card-paragraph {
+    margin: 0 20px;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.home-card-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20px;
+}
+
+.home-card-button {
+    background-color: var(--primary) !important;
+}
+
+@media screen and (min-width: 450px) {
+    .home-card-header {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .home-card-header {
+        font-size: 2.3rem;
+    }
+
+    .home-card {
+        display: flex;
+        max-width: 90%;
+        justify-content: center;
+        height: 400px;
+        margin: 50px 0;
+    }
+
+
+
+    .home-card-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home-card-button {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-search-container {
+        background-image: url("../../assets/pagesImages/house6L.webp");
+        background-position: 50% 20%;
+    }
+
+    .home-card-image {
+        max-width: 600px;
+    }
+
+    .home-card-title {
+        font-size: 1.9rem;
+    }
+
+    .home-card-paragraph {
+        font-size: 1.2rem;
+    }
+
+    .home-card-button-container {
+        justify-content: flex-end;
+    }
+
+    .home-card-button:nth-child(1) {
+        margin-right: 30px;
+    }
+}
