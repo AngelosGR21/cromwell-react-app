@@ -1,5 +1,5 @@
 .home-search-container {
-    background-image: url("../../assets/pagesImages/house6.webp");
+    background-image: url("../../assets/pageImages/house6.webp");
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -116,7 +116,7 @@
 
 @media screen and (min-width: 1200px) {
     .home-search-container {
-        background-image: url("../../assets/pagesImages/house6L.webp");
+        background-image: url("../../assets/pageImages/house6L.webp");
         background-position: 50% 20%;
     }
 

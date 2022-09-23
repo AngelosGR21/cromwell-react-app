@@ -4,7 +4,7 @@ html {
 
 
 .landing-image-container {
-    background-image: linear-gradient(180deg, rgba(137, 106, 96, 0.5046393557422969) 0%, rgba(91, 63, 54, 1) 100%), url("../../assets/pagesImages/house2.webp");
+    background-image: linear-gradient(180deg, rgba(137, 106, 96, 0.5046393557422969) 0%, rgba(91, 63, 54, 1) 100%), url("../../assets/pageImages/house2.webp");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -47,7 +47,7 @@ html {
 
 @media screen and (min-width: 1300px) {
     .landing-image-container {
-        background-image: linear-gradient(180deg, rgba(137, 106, 96, 0.5046393557422969) 0%, rgba(91, 63, 54, 1) 100%), url("../../assets/pagesImages/house2L.webp");
+        background-image: linear-gradient(180deg, rgba(137, 106, 96, 0.5046393557422969) 0%, rgba(91, 63, 54, 1) 100%), url("../../assets/pageImages/house2L.webp");
     }
 
     .landing-main-header {

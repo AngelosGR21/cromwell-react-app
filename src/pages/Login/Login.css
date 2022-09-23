@@ -11,7 +11,7 @@
     }
 
     .login-image-container {
-        background-image: url("../../assets/pagesImages/house3.webp");
+        background-image: url("../../assets/pageImages/house3.webp");
         background-size: cover;
         background-position: center;
         display: block;
@@ -25,6 +25,6 @@
 
 @media screen and (min-width: 1120px) {
     .login-image-container {
-        background-image: url("../../assets/pagesImages/house4.webp");
+        background-image: url("../../assets/pageImages/house4.webp");
     }
 }
