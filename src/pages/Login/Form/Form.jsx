@@ -46,6 +46,7 @@ const Form = () => {
                     required
                     className={className}
                     label="Password"
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     error={error}
